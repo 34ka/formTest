@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
-class YandexTest {
+class GoogleTest {
 
     @BeforeEach
     void openPage() {
-        open("https://yandex.ru");
+        open("https://Google.ru");
     }
 
     @Test
