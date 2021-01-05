@@ -13,17 +13,16 @@ class YandexTest {
 
     @BeforeEach
     void openPage() {
-        open("https://yandex.ru");
+        open("https://google.ru");
     }
 
     @Test
-    void searchTest() {
-        $(".input__control").setValue("Новосибирск").pressEnter();
-        $$(".serp-item")
-                .get(0).shouldHave(Condition.text("Новосибирск"));
-
+    void googleSearchString () {
+        //input text for search
+        $(byName("q")).val("Debit card").pressEnter();
+        //assert text
+        $("html").shouldHave(text("Debit card"));
     }
-
 
     @AfterEach
     void closeBrowser() {
